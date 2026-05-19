@@ -2,6 +2,7 @@ import 'dart:math';
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'mode_orang_tua_page.dart'; // Import halaman Mode Orang Tua
 
 class VerifikasiKodePage extends StatefulWidget {
   const VerifikasiKodePage({Key? key}) : super(key: key);
@@ -245,7 +246,7 @@ class _VerifikasiKodePageState extends State<VerifikasiKodePage>
                       onPressed: () {
                         // Logika ketika kode disubmit
                         if (_pinController.text.length == 4) {
-                          // Contoh aksi verifikasi berhasil
+                          // Tampilkan pesan berhasil
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(
@@ -256,7 +257,14 @@ class _VerifikasiKodePageState extends State<VerifikasiKodePage>
                               backgroundColor: Colors.green,
                             ),
                           );
-                          Navigator.pop(context);
+
+                          // Navigasi langsung menuju halaman Mode Orang Tua
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ModeOrangTuaPage(),
+                            ),
+                          );
                         } else {
                           ScaffoldMessenger.of(context).showSnackBar(
                             const SnackBar(
