@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_overlay_window/flutter_overlay_window.dart';
 import 'dart:io';
 import 'package:android_intent_plus/android_intent.dart';
-import 'package:reminder_kelompok/intro/onboarding/pages/onboarding_page.dart';
-import 'package:reminder_kelompok/intro/splash_page.dart';
+import 'package:reminder_kelompok/features/onboarding/pages/splash_page.dart';
 
 // --- TAMBAHAN: Import file onboarding kamu ---
 // Pastikan nama filenya sesuai dengan yang kamu simpan (misal: onboarding_page.dart)
